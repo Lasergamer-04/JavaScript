@@ -1,0 +1,1 @@
+man soll eine funktion schreiben die alle permutationen von einer menge wiedergeben soll (mit beliebig vielen elementen)

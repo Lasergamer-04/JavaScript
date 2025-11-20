@@ -1,0 +1,53 @@
+1 summe nach ziffer
+6 doppelt
+7 summe
+11 summe nach ziffer
+7 doppelt
+18 summe
+27 summe nach ziffer
+6 doppelt
+33 summe
+38 summe nach ziffer
+6 doppelt
+44 summe
+50 summe nach ziffer
+9 doppelt              || hier problem
+59 summe
+63 summe nach ziffer
+8 doppelt
+71 summe
+72 summe nach ziffer
+5 doppelt
+77 summe
+80 summe nach ziffer
+0 doppelt
+80 summe
+Ist gültig nach Luhn: true
+
+
+
+1 summe nach ziffer
+6 doppelt
+7 summe
+11 summe nach ziffer
+7 doppelt
+18 summe
+27 summe nach ziffer
+6 doppelt
+33 summe
+38 summe nach ziffer
+6 doppelt
+44 summe
+50 summe nach ziffer
+0 doppelt             || hier problem
+50 summe
+54 summe nach ziffer
+8 doppelt
+62 summe
+63 summe nach ziffer
+5 doppelt
+68 summe
+71 summe nach ziffer
+0 doppelt
+71 summe
+Ist gültig nach Luhn: false

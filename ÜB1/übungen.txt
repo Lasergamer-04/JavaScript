@@ -1,0 +1,10 @@
+Übungsblatt 1
+
+1 Wissensfrage
+Übung 1.
+let force = G * mass1 * mass 2 / r * r
+-> const force = (G * mass1 * mass2) // (r * r)
+
+Übung 2.
+bildschirm.js
+bildschirm.html

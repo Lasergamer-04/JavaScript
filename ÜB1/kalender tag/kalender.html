@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An welchen Tag sind Sie geboren?</title>
+</head>
+<body>
+    <h1>An welchen Tag sind Sie geboren?</h1>
+    <p>Geben Sie das Geburtsdatum ein:</p>
+
+    <label for="day">Tag:</label>
+    <input type="number" id="day" min="01" max="31">
+
+    <label for="month">Monat:</label>
+    <input type="number" id="month" min="01" max="12">
+
+    <label for="year">Jahr:</label>
+    <input type="number" id="year" min ="00" max="99">
+    
+    <button id="calculateDayBtn">Tag Berechnen</button>
+    <p id="dayResult"></p>
+    <script type="module" src="kalender.js"></script>
+</body>
+</html>

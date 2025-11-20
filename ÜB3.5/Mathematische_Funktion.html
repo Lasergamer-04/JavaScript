@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematische Funktion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mathematische Funktion</h1>
+
+    <div class="description">
+        <div class="text">
+            <p> geben sie den Flächeninhalt Fs vom Kreisabschnitt AE sowie die Länge s von dem Sehnen AE eines Kreis mit dem Radius r.</p>
+            <p> wir geben ihnen den radius r zurück</p>
+        </div>
+
+        <img src="Abb1.png" alt="Kreisabschnitt">
+    </div>
+
+    <div id="form">
+        <form method="get">
+            <label for="Fs">Flächeninhalt Fs:</label>
+            <input type="number" id="Fs" name="Fs" step="any" required>
+            <label for="s">Länge s:</label>
+            <input type="number" id="s" name="s" step="any" required>
+            <button type="button" onclick="handleCalculation()">
+                Berechnen
+            </button>
+        </form>
+    </div>
+
+    <p id="result"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>

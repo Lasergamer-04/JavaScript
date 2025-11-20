@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Exercices JavaScript</h1>
+
+    <!-- Exercice 2: Calcul de Distance -->
+    <div class="exercise">
+        <h2>Exercice 2: Calcul de Distance entre Deux Points</h2>
+        <p>Calcule la distance entre deux points géographiques en utilisant la formule du grand cercle.</p>
+        <div>
+            <label>Point 1:</label><br>
+            <input type="number" id="x1" placeholder="Latitude 1" step="0.01" value="48.87">
+            <input type="number" id="y1" placeholder="Longitude 1" step="0.01" value="-2.33">
+        </div>
+        <div>
+            <label>Point 2:</label><br>
+            <input type="number" id="x2" placeholder="Latitude 2" step="0.01" value="37.8">
+            <input type="number" id="y2" placeholder="Longitude 2" step="0.01" value="122.4">
+        </div>
+        <button onclick="calculerDistance()">Calculer la Distance</button>
+        <div id="resultatDistance" class="output"></div>
+    </div>
+
+    <!-- Exercice 3: Conversion Décimal vers Binaire -->
+    <div class="exercise">
+        <h2>Exercice 3: Conversion Décimal vers Binaire</h2>
+        <p>Convertit un nombre décimal en sa représentation binaire.</p>
+        <input type="number" id="decimal" placeholder="Entrez un nombre décimal" value="13">
+        <button onclick="convertirBinaire()">Convertir</button>
+        <div id="resultatBinaire" class="output"></div>
+    </div>
+
+    <!-- Exercice 4: Validation Luhn -->
+    <div class="exercise">
+        <h2>Exercice 4: Validation Algorithme de Luhn</h2>
+        <p>Vérifie si un numéro est valide selon l'algorithme de Luhn.</p>
+        <input type="text" id="luhn" placeholder="Entrez un numéro" value="371449635398431">
+        <button onclick="verifierLuhn()">Vérifier</button>
+        <div id="resultatLuhn" class="output"></div>
+    </div>
+
+    <!-- Exercice 5: Visualisation des Votes -->
+    <div class="exercise">
+        <h2>Exercice 6: Visualisation des Votes</h2>
+        <p>Visualise la répartition des votes entre différents partis.</p>
+        <div>
+            <input type="number" class="vote" placeholder="Votes Parti 1" value="30">
+            <input type="number" class="vote" placeholder="Votes Parti 2" value="20">
+            <input type="number" class="vote" placeholder="Votes Parti 3" value="15">
+            <input type="number" class="vote" placeholder="Votes Parti 4" value="25">
+            <input type="number" class="vote" placeholder="Votes Parti 5" value="10">
+        </div>
+        <button onclick="visualiserVotes()">Visualiser</button>
+        <div id="resultatVotes" class="output" style="font-family: monospace;"></div>
+    </div>
+
+    <script src="aufgabe_2.js"></script>
+    <script src="aufgabe_3.js"></script>
+    <script src="aufgabe_4.js"></script>
+    <script src="aufgabe_6.js"></script>
+
+    <script>
+        function calculerDistance() {
+            const x1 = parseFloat(document.getElementById('x1').value);
+            const y1 = parseFloat(document.getElementById('y1').value);
+            const x2 = parseFloat(document.getElementById('x2').value);
+            const y2 = parseFloat(document.getElementById('y2').value);
+            
+            const distanceNM = berechneDistanz(x1, y1, x2, y2);
+            const distanceKM = distanceNM * 1.852;
+
+            document.getElementById('resultatDistance').innerHTML = 
+                `Distance: ${distanceNM} milles nautiques (${distanceKM} km)`;
+        }
+
+        function convertirBinaire() {
+            const decimal = parseInt(document.getElementById('decimal').value);
+            const binaire = dezimalZuBinaer(decimal);
+            document.getElementById('resultatBinaire').innerHTML = 
+                `${decimal} en binaire: ${binaire}`;
+        }
+
+        function verifierLuhn() {
+            const numero = BigInt(document.getElementById('luhn').value);
+            const estValide = istLuhnGueltig(numero);
+            document.getElementById('resultatLuhn').innerHTML = 
+                `Le numéro ${estValide ? 'est' : "n'est pas"} valide selon l'algorithme de Luhn`;
+        }
+
+        // Exécuter les calculs initiaux
+        calculerDistance();
+        convertirBinaire();
+        verifierLuhn();
+        visualiserVotes();
+    </script>
+</body>
+</html>
